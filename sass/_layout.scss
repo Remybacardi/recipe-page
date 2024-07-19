@@ -1,0 +1,83 @@
+section {
+  margin-bottom: 2.5rem;
+}
+
+section:nth-of-type(n + 2):not(:last-child) {
+  border-bottom: solid 2px #e6e4e4;
+  padding-bottom: 2.5rem;
+}
+
+.heading {
+  display: grid;
+  grid-row-gap: 1.5rem;
+
+  &__img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width: 500px) {
+      border-radius: 0;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 1.5rem;
+    color: var(--color-brown-light);
+  }
+}
+
+.all-lists {
+  margin-left: 2rem;
+  color: var(--color-brown-light);
+}
+
+.all-items {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.preparation {
+  background-color: var(--color-rose-light);
+  padding: 2rem;
+
+  &__heading {
+    color: var(--color-rose-dark);
+    margin-bottom: 1rem;
+  }
+}
+
+.instructions__list {
+  list-style: decimal;
+
+  &--item::marker {
+    color: var(--color-brown);
+    font-weight: 700;
+  }
+}
+
+.nutrition {
+  &__paragraph {
+    margin-bottom: 2rem;
+    color: var(--color-brown-light);
+  }
+
+  &__values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 0;
+
+    &--macro {
+      margin-left: 4rem;
+      color: var(--color-brown-light);
+    }
+
+    &--data {
+      color: var(--color-brown);
+    }
+  }
+}
+
+.nutrition__values:not(:last-child) {
+  border-bottom: solid 1px #e6e4e4;
+}
